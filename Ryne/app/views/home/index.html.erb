@@ -5,12 +5,9 @@
 </head>
 <body>
 <%= link_to "logout", destroy_user_session_path, :method => :delete %>
-<ul>
-  <li class="item1">jason</li>
-  <li class="item2">thomas</li>
-  <li class="item3"></li>
-  <li class="item4"></li>
-  <li class="item5"></li>
-</ul>
+
+Upload your photos: <br>
+<%= link_to 'Photos', photos_path, controller :photos, :method => :post %>
+
 </body>
 </html>
