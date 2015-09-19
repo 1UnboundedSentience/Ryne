@@ -8,6 +8,41 @@
 
 Upload your photos: <br>
 <%= link_to 'Photos', photos_path, controller :photos, :method => :post %>
+<form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi"
+enctype="multipart/form-data" method="post">
+<p>
+Type some text (if you like):<br>
+<input type="text" name="textline" size="30">
+</p>
+<p>
+Please specify a file, or a set of files:<br>
+<input type="file" name="datafile" size="40">
+</p>
+<div>
+<input type="submit" value="Send">
+</div>
+</form>
 
+<%= form_for @photos do |f| %>
+  <p>
+    <%= f.label :geolocation %><br>
+    <%= f.text_field :geolocation %>
+  </p>
+  <p>
+  <%= f.label :season %><br>
+  <%= f.text_field :season %>
+</p>
+<p>
+  <%= f.label :emotion %><br>
+  <%= f.text_area :emotion %>
+</p>
+<p>
+  <%= f.label :photo_data %><br>
+  <%= f.datafile :photo_data %>
+</p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 </body>
 </html>

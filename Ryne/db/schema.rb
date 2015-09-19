@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20150919221743) do
 
   create_table "photos", force: :cascade do |t|
+    t.string   "photo_data"
     t.string   "geolocation"
     t.string   "emotion"
     t.string   "season"
