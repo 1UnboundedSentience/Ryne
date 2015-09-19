@@ -4,6 +4,7 @@ class CreatePhotos < ActiveRecord::Migration
       t.string :geolocation
       t.string :emotion
       t.string :season
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
