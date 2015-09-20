@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
-
+  post 'photos' => 'photos#create'
+  get 'photos' => 'photos#index'
   # resource :user do
   # end
   resource :photos
