@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  geolocation: MyString
+  emotion: MyString
+  season: MyString
+
+two:
+  geolocation: MyString
+  emotion: MyString
+  season: MyString
