@@ -13,7 +13,10 @@ Season: <%= photo.season %> <br>
 Photo data: <%= photo.photo_data %> <br>
 Uploaded Photo: <img src=<%= photo.uploaded_photo %> width="400" height="250"> > <br>
 <br>
-
+<%= EXIFR::JPEG.new('public/system/photos/uploaded_photos/000/000/005/original/Aerial03.jpg').width   %>
+<%= link = photo.uploaded_photo.url %>
+<%= link = photo.uploaded_photo.url %> <br>
+<%= link %>
 <% end %>
 <%= link_to 'Back', home_index_path %>
 </body>
