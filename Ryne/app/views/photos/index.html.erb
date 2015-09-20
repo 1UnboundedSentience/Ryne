@@ -4,10 +4,15 @@
   <title>photos index</title>
 </head>
 <body>
-
+<h2 id="photo-display">Here are your photos:</h2> <br>
 <% @photos.each do |photo| %>
 
-<%= photo.emotion %>
+Emotion: <%= photo.emotion %> <br>
+Geolocation: <%= photo.geolocation %> <br>
+Season: <%= photo.season %> <br>
+Photo data: <%= photo.photo_data %> <br>
+Uploaded Photo: <%= photo.uploaded_photo %> <br>
+<br>
 
 <% end %>
 

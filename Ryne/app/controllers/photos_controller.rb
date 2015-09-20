@@ -1,10 +1,13 @@
 class PhotosController < ApplicationController
   def create
+    p params
     @photo = Photo.new(
-    photo_data: params[:photo_data],
-    geolocation: params[:geolocation],
-    emotion: params[:emotion],
-    season: params[:season]
+      user_id: session[:user_id],
+      photo_data: params[:photo_data],
+      geolocation: params[:geolocation],
+      emotion: params[:emotion],
+      season: params[:season],
+      uploaded_photo: params[:uploaded_photo]
     )
 
     if @photo.save

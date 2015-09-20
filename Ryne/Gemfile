@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+gem 'exifr'
+gem "paperclip", "~> 4.3"
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -45,3 +46,9 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+# Use postgresql as the database for Active Record
+  gem 'pg'
+  gem 'rails_12factor', '0.0.2'
+  gem 'puma',           '2.11.1'
+end
